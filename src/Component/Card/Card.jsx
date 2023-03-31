@@ -16,9 +16,9 @@ const Card = (props) => {
                     <p className='publish-date' >{publishDate}</p>
                 </div>
             </div>
-           
+            <p className='read-time'>{readTime}</p>
             </div>
-
+            <h2 className='blog-title'>{blogTitle}</h2>
 
 
         </div>
