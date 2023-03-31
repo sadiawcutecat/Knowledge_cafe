@@ -3,12 +3,14 @@ import './Card.css'
 
 const Card = (props) => {
     console.log(props);
+    const { img, blogTitle, authorName, authorImage, publishDate, readTime } = props.card;
 
     return (
-        <div>
-          <img className='card-img' src={props.card.img} alt="" />
-        
+        <div className='card=container'>
+            <img className='card-img' src={img} alt="" />
            
+
+
         </div>
     );
 };
