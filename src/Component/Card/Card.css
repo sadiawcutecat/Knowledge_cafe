@@ -11,4 +11,37 @@ border-radius: 8px;
     border-radius: 50%;
     margin-top: 12px;
 }
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Exo 2';
+    /* gap: 350px; */
+}
+.card-subInfo{
+    display: flex;
+    gap: 20px;
+}
+.card-subInfo img{
+    margin-top: 20px;
+}
+.author-name{
+    margin-bottom: 0;
+ 
+}
+.publish-date{
+    margin-top:2px;
+    
+}
+.read-time{
+    margin-right: 210px;
+}
+.blog-title{
+font-family: 'Exo 2';
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+margin-top: 5px;
+margin-bottom: 0;
+}
+
 
