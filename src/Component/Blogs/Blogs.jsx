@@ -21,12 +21,11 @@ const Blogs = () => {
             }
             </div>
             <div className="sideBlog-container">
-                <h2>side bar here</h2>
                 <div className='time-spent-blog'>
-
+             <p>Spent time on read: </p>
                 </div>
                 <div className='bookmark-blog'>
-
+                <p>Bookmarked Blogs: </p>
                 </div>
             </div>
             

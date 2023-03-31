@@ -4,3 +4,14 @@
     margin-top: 30px;
     
 }
+.time-spent-blog{
+width: 350px;
+height: 70px;
+background: rgba(96, 71, 236, 0.1);
+border: 1px solid #6047EC;
+border-radius: 8px;
+font-family: 'Exo 2';
+font-weight: 600;
+font-size: 22px;
+padding-left: 30px;
+}

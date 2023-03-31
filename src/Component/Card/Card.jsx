@@ -16,10 +16,10 @@ const Card = (props) => {
                     <p className='publish-date' >{publishDate}</p>
                 </div>
             </div>
-            <p className='read-time'>{readTime}</p>
+            <p className='read-time'>{readTime} min read</p>
             </div>
             <h2 className='blog-title'>{blogTitle}</h2>
-
+            <p><u><a href="">Mark as read</a></u> </p>
 
         </div>
     );
