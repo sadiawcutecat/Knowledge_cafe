@@ -33,7 +33,7 @@ border-radius: 8px;
     
 }
 .read-time{
-    margin-right: 100px;
+    margin-right: 80px;
 }
 .blog-title{
 font-family: 'Exo 2';
@@ -43,6 +43,17 @@ font-size: 35px;
 margin-top: 5px;
 margin-bottom: 0;
 }
+.button {
+    
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+    outline: inherit;
+}
+
 
 
 
