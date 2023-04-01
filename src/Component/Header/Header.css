@@ -14,3 +14,19 @@ border: 1px solid white;
 border-radius: 50%;
 margin-top: 12px;
 }
+
+@media only screen and (max-width:678px) {
+    .header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    
+}
+@media only screen and (max-width:678px) {
+    .header img{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+}

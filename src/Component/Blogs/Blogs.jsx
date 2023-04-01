@@ -5,28 +5,30 @@ import './Blogs.css'
 const Blogs = (props) => {
     const [cards, setCards] = useState([]);
     const [count, setCount] = useState(0);
-    const [bookmarkCount , setBookmarkCount] = useState(0);
-    const [blogTitle, setBlogTitle] = useState([]);
-   
+    const [bookmarkCount, setBookmarkCount] = useState(0);
+    const [title, setTitle] = useState([]);
+
     useEffect(() => {
         fetch('Blogs.json')
             .then(res => res.json())
             .then(data => setCards(data))
 
     }, [])
-    
 
-    const handleClick = (time) =>{
-        const newCount = count + time ;
+
+    const handleClick = (time) => {
+        const newCount = count + time;
         setCount(newCount);
     }
-    const handleBookmark = (time) =>{
-        setBookmarkCount(time)
+    const handleBookmark = (id) => {
+        setBookmarkCount(id)
     }
     const handleTitle = (blogTitle) => {
-        setBlogTitle(blogTitle);
-     
-        
+        console.log(blogTitle);
+        const newTitleArray = [...title, blogTitle];
+        setTitle(newTitleArray);
+        console.log(newTitleArray);
+
     }
     return (
         <div className='blogs-container'>
@@ -46,13 +48,29 @@ const Blogs = (props) => {
                     <p>Spent time on read:{count} min </p>
                 </div>
                 <div className='bookmark-blog'>
-                    <p>Bookmarked Blogs:{bookmarkCount} </p>
-                </div>
-                <div>
-                    <h4>Title: {blogTitle}</h4>
-                </div>
-            </div>
+                    <p>Bookmarked Blogs:{title.length} </p>
 
+
+                    <div>
+                        {
+                            title.map(e => {
+                                <div>
+                                    <div>
+                                    <p className='bookmark-title'>{e}</p>
+                                    </div>
+                                    
+                                    {/* <div>
+                                        <br />
+                                    </div> */}
+                                </div>
+
+                            })
+                        }
+                        <h4>Title: {title}</h4>
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 };
