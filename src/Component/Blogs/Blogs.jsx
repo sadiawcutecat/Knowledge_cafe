@@ -5,6 +5,8 @@ import './Blogs.css'
 const Blogs = (props) => {
     const [cards, setCards] = useState([]);
     const [count, setCount] = useState(0);
+    const [bookmarkCount , setBookmarkCount] = useState(0);
+    const [blogTitle, setBlogTitle] = useState([]);
    
     useEffect(() => {
         fetch('Blogs.json')
@@ -15,9 +17,16 @@ const Blogs = (props) => {
     
 
     const handleClick = (time) =>{
-        console.log(time);
         const newCount = count + time ;
         setCount(newCount);
+    }
+    const handleBookmark = (time) =>{
+        setBookmarkCount(time)
+    }
+    const handleTitle = (blogTitle) => {
+        setBlogTitle(blogTitle);
+     
+        
     }
     return (
         <div className='blogs-container'>
@@ -27,15 +36,20 @@ const Blogs = (props) => {
                         key={card.id}
                         card={card}
                         handleClick={handleClick}
+                        handleBookmark={handleBookmark}
+                        handleTitle={handleTitle}
                     ></Card>)
                 }
             </div>
             <div className="sideBlog-container">
                 <div className='time-spent-blog'>
-                    <p>Spent time on read:{count} </p>
+                    <p>Spent time on read:{count} min </p>
                 </div>
                 <div className='bookmark-blog'>
-                    <p>Bookmarked Blogs: </p>
+                    <p>Bookmarked Blogs:{bookmarkCount} </p>
+                </div>
+                <div>
+                    <h4>Title: {blogTitle}</h4>
                 </div>
             </div>
 
