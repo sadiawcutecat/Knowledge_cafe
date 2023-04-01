@@ -27,7 +27,7 @@ const Card = (props) => {
                     </div>
                     <div className='time-container'>
                     <p className='read-time'>{readTime} min read</p>
-                    <button className='bookmark-icon' onClick={() =>props.handleTitle(blogTitle)}
+                    <button className='bookmark-icon' onClick={() =>props.handleTitle(props.card)}
                     ><FontAwesomeIcon icon={faBookmark} /></button>
                     </div>
                 </div>

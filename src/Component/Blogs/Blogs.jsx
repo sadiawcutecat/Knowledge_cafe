@@ -23,13 +23,14 @@ const Blogs = (props) => {
     const handleBookmark = (id) => {
         setBookmarkCount(id)
     }
-    const handleTitle = (blogTitle) => {
-        console.log(blogTitle);
-        const newTitleArray = [...title, blogTitle];
+    const handleTitle = (blog) => {
+        // console.log(blogTitle);
+        const newTitleArray = [...title, blog];
         setTitle(newTitleArray);
         console.log(newTitleArray);
 
     }
+    console.log(title);
     return (
         <div className='blogs-container'>
             <div className="blogCart-container">
@@ -52,21 +53,20 @@ const Blogs = (props) => {
 
 
                     <div>
+                        {/* <p>Title: </p> */}
                         {
                             title.map(e => {
-                                <div>
-                                    <div>
-                                    <p className='bookmark-title'>{e}</p>
-                                    </div>
+                                
+                                
+                                    return <p className='bookmark-title'>{e.blogTitle}</p>
+                                
                                     
-                                    {/* <div>
-                                        <br />
-                                    </div> */}
-                                </div>
+                                   
+                                
 
                             })
                         }
-                        <h4>Title: {title}</h4>
+                        {/* <h4>{title}</h4> */}
                     </div>
                 </div>
 
